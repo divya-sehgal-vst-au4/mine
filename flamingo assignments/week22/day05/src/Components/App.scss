@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("https://images.pexels.com/photos/127873/pexels-photo-127873.jpeg?cs=srgb&dl=woman-in-white-shirt-standing-near-glass-window-inside-room-127873.jpg");
+  background-size: cover;
+}
+#root {
+  min-height: 100vh;
+  font-family: sans-serif;
+  background-color: rgba(0, 0, 0, 0.306);
+}
+
+@mixin row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin col {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  @include row();
+  justify-content: space-evenly;
+  margin: 0 3rem;
+}
+$sizes: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+@each $size in $sizes {
+  .m-#{$size} {
+    margin: #{$size}rem;
+  }
+}
+@each $size in $sizes {
+  .p-#{$size} {
+    padding: #{$size/2}rem;
+  }
+}
+
+@each $size in $sizes {
+  .col-#{$size} {
+    @include col();
+    flex-basis: ($size/10 * 100%);
+  }
+}
+.row {
+  @include row();
+}
+.col {
+  @include col();
+}
+
+// .shadow {
+//   box-shadow: 0 0.5rem 1rem rgba(223, 223, 223, 0.15);
+// }
+
+.center {
+  text-align: center;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.float-right {
+  float: right;
+}
+.bg-white {
+  background-color: white;
+}
+a {
+  color: white;
+  text-decoration: none;
+}

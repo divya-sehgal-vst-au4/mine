@@ -1,0 +1,54 @@
+$card-color-even: #ffffffa8;
+$card-color-odd: rgba(165, 42, 42, 0.809);
+$home-text-color: rgb(231, 231, 231);
+$home-border: rgba(255, 255, 255, 0.714);
+@mixin row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin col {
+  display: flex;
+  flex-direction: column;
+}
+.Home {
+  @include col();
+  flex-basis: 70%;
+  color: $home-text-color;
+  justify-content: space-evenly;
+  h1 {
+    text-shadow: -1px 1px 3px #333;
+  }
+  h2 {
+    margin: 0 0 1rem 0;
+  }
+  .row {
+    justify-content: flex-start;
+  }
+}
+
+.Home {
+  .row:nth-child(even) .col-8 .row {
+    background-color: $card-color-even;
+    color: black;
+    border: 2px solid $home-border;
+  }
+  .row:nth-child(odd) .col-8 .row {
+    background-color: $card-color-odd;
+    border: 2px solid $home-border;
+  }
+
+  .row:nth-child(2) .col-8 .row {
+    background-color: rgba(0, 0, 0, 0.374);
+    color: white;
+  }
+}
+
+.service-image {
+  background-color: rgb(255, 255, 255);
+}
+
+.card {
+  margin: 0.7rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+}

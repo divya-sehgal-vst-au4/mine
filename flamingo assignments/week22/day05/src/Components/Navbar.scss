@@ -1,0 +1,40 @@
+$nav-color: rgba(27, 27, 44, 0.639);
+$nav-text-color: rgb(255, 255, 255);
+
+// padding
+$nav-padding: 1rem;
+
+@mixin row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin col {
+  display: flex;
+  flex-direction: column;
+}
+
+.Navbar {
+  @include row();
+  background-color: $nav-color;
+  ul {
+    width: 55%;
+    list-style: none;
+    @include row();
+    justify-content: flex-start;
+    li {
+      padding: $nav-padding;
+    }
+  }
+  .logo {
+    padding: $nav-padding;
+  }
+
+  .login {
+    margin-left: auto;
+    width: 10%;
+    @include row();
+    justify-content: space-around;
+    padding: $nav-padding;
+    color: $nav-text-color;
+  }
+}

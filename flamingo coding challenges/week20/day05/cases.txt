@@ -1,0 +1,220 @@
+1. let yourArray = [
+    "Mukhtar", "Ahmad", true, 2, 10
+];
+
+2. let myArray = ["a", "Bee", "c", "d"];
+
+3. function mixedNumbers(arr) {
+    arr.push(7, "VIII", 9)
+    arr.unshift("I", 2, "three",)
+  return arr;
+};
+
+4. function popShift(arr) {
+  let popped = arr.pop()
+  let shifted = arr.shift()
+  return [shifted, popped];
+};
+
+5. const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+    arr.splice(1,4);
+
+6. function htmlColorNames(arr) {
+      arr.splice(0, 2, "DarkSalmon", "BlanchedAlmond")
+  return arr;
+};
+
+7. function forecast(arr) {
+   let newArr = arr.slice(2,4)
+  return newArr;
+};
+
+8. function copyMachine(arr, num) {
+  let newArr = [];
+  while (num >= 1) {
+    newArr.push([...arr])
+    num--;
+  }
+  return newArr;
+};
+
+9. function spreadOut() {
+    let fragment = ['to', 'code'];
+    let sentence = ["learning",...fragment, "is", "fun"]
+    return sentence;
+};
+
+10. function quickCheck(arr, elem) {
+    if(arr.indexOf(elem)===-1){
+       return false
+    }
+    else {
+      return true
+    }
+};
+
+11. function filteredArray(arr, elem) {
+  let newArr = [];
+  for(var i=0; i<arr.length; i++){
+      if(arr[i].indexOf(elem)==-1){
+        newArr.push(arr[i])
+  }
+} 
+return newArr;
+}
+
+12. let myNestedArray = [
+  [],
+  [
+    [],['deep']
+  ],
+  [
+    [
+      [],['deeper']
+    ],
+    [
+      [
+        ['deepest']
+      ]
+    ]
+  ],
+];
+
+13. let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28
+};
+
+foods['bananas'] = 13
+foods['grapes'] = 35
+foods['strawberries'] = 27
+
+console.log(foods);
+
+14. let userActivity = {
+  id: 23894201352,
+  date: 'January 1, 2017',
+  data: {
+    totalUsers: 51,
+    online: 42
+  }
+};
+
+userActivity.data.online = 45
+
+15. let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+
+function checkInventory(scannedItem) {
+    return foods[scannedItem] 
+}
+
+16. let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+
+delete foods['oranges']
+delete foods.plums;
+delete foods.strawberries;
+
+17. let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function isEveryoneHere(obj) {
+  if('Alan' in obj && 'Sarah' in obj && 'Jeff' in obj
+  && 'Ryan' in obj){
+    return true
+  }
+  else return false
+}
+
+18. function countOnline(usersObj) {
+  let count = 0
+  for (let user in usersObj){
+    if(usersObj[user].online === true){
+      count++
+    }
+  }
+  return count
+}
+
+19. let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function getArrayOfUsers(obj) {
+  let array = []
+for (let user in obj){
+  array.push(user)
+}
+return array
+}
+
+20. let user = {
+  name: 'Kenneth',
+  age: 28,
+  data: {
+    username: 'kennethCodesAllDay',
+    joinDate: 'March 26, 2016',
+    organization: 'freeCodeCamp',
+    friends: [
+      'Sam',
+      'Kira',
+      'Tomo'
+    ],
+    location: {
+      city: 'San Francisco',
+      state: 'CA',
+      country: 'USA'
+    }
+  }
+};
+
+function addFriend(userObj, friend) {
+  userObj.data.friends.push(friend)
+  return userObj.data.friends
+}
+

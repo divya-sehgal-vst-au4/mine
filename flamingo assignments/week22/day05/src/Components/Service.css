@@ -1,0 +1,79 @@
+.service-card {
+  position: relative;
+  color: #e7e7e7;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.service-card .time {
+  position: absolute;
+  background-color: rgba(128, 0, 0, 0.864);
+  padding: 0.3rem;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.service-card label {
+  position: relative;
+  padding: 1rem;
+  color: rgba(0, 0, 0, 0.796);
+}
+
+.service-card select {
+  margin: 0 0.2rem;
+}
+
+.service-card input {
+  float: right;
+  width: 50%;
+  background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+  border: none;
+  outline: none;
+}
+
+.service-card button {
+  padding: 0.9rem;
+  background-color: brown;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+label:nth-of-type(odd) {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #939393;
+}
+
+label:nth-of-type(even) {
+  background-color: white;
+}
+
+.service-name {
+  background-color: #101f3be1;
+  padding: 2rem 0;
+}
+
+.price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #4a842d;
+  padding: 0.3rem;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.service-card-img {
+  border: 5px white solid;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+/*# sourceMappingURL=Service.css.map */

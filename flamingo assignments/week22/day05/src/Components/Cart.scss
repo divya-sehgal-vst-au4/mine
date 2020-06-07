@@ -1,0 +1,74 @@
+$cart-color: #13284e9e;
+$cart-text-color: rgb(231, 231, 231);
+
+@mixin row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin col {
+  display: flex;
+  flex-direction: column;
+}
+.Cart {
+  position: relative;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  // border-radius: 5px;
+  height: 80vh;
+  @include col();
+  flex-basis: 30%;
+  background-color: $cart-color;
+  color: $cart-text-color;
+  ul {
+    list-style: none;
+  }
+  h2 {
+    .cart-icon {
+      color: rgb(243, 228, 179);
+    }
+  }
+  table {
+    text-align: left;
+    width: 100%;
+  }
+  td,
+  th {
+    padding: 0.5rem;
+  }
+  .Cart-total {
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    // border-radius: 5px;
+    font-size: 16px;
+    padding: 1rem;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.782);
+    width: 100%;
+  }
+}
+.Cart-total span {
+  float: right;
+}
+.cart-icon {
+  margin: 0 0.4rem;
+}
+.checkout {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  transform: translateY(-150%);
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: brown;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+.trash {
+  cursor: pointer;
+}
+.trash:hover {
+  color: rgb(220, 178, 102);
+}

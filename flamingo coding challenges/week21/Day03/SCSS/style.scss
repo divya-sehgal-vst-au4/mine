@@ -1,0 +1,129 @@
+$orange : rgb(240, 160, 13);
+$green: rgb(60, 192, 60);
+
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+main,.header,section,aside,footer {
+  border: 1px solid darkred;
+}
+
+.header {
+    .logo {
+        margin: 0;
+        align-self: flex-start;
+        height: 100%;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+  display: flex;
+  justify-content: space-between;
+  background-color: $green;
+  height: 10%;
+  align-items: center;
+  .navHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+  
+.starPhone {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    align-items: center;
+  }
+  .phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+
+
+h1 {
+  background-color: $orange;
+  margin: 0;
+}
+h3 {
+  margin: 0;
+}
+
+main {
+  height: 74%;
+  display: flex;
+  background-color: khaki;
+}
+
+article {
+  display: flex;
+  width: 100%;
+}
+
+
+
+
+.section {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 2%;
+  margin-right: 2%;
+  section {
+    height: 30%;
+    background-color: $orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: space-around;
+  margin-right: 2%;
+  aside {
+    display: flex;
+    flex-direction: column;
+    border-style: dashed;
+    height: 40%;
+    justify-content: center;
+  }
+}
+
+
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 10%;
+  background-color: $green;
+  .footerNav{
+      display: flex;
+      width: 40%;
+      justify-content: space-between;
+  }
+
+}
+
+
+
+.copyright {
+  margin: 0px;
+}
