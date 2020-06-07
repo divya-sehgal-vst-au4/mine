@@ -1,4 +1,5 @@
-{
+{ 
+    "customers" : [
     {
         "latitude": "52.986375", 
         "user_id": 12, 
@@ -191,5 +192,7 @@
         "name": "David Behan", 
         "longitude": "-8.522366"
     }
+    
+   ]
     
 }
